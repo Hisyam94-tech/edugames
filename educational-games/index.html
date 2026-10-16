@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132b26">
+  <meta name="description" content="Choose an animal warrior and solve Math problems to attack and automatically unleash skills across five stages.">
+  <title>Wildwood Warriors | EduGames</title>
+  <link rel="stylesheet" href="css/game.css?v=8f8f966368cd">
+  <script src="js/engine.js?v=5a7623dabce2" defer></script>
+  <script type="module" src="js/game.js?v=7cff5b0f1ca0"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to game</a>
+  <header class="topbar"><a class="logo" href="../index.html"><span class="logo-mark">e<span>+</span></span>edugames<span class="gold">.</span></a><span class="game-label">THE MATH ADVENTURES</span><a class="back-link" href="../mathematics.html">&larr; Mathematics</a></header>
+  <main id="main">
+    <div id="loading" class="loading" role="status">Gathering your warriors...</div>
+    <div id="load-error" class="loading" hidden><h1>The adventure could not load.</h1><p>Check your connection and try again.</p><button id="reload" class="primary">Try again</button></div>
+    <noscript><p class="loading">Enable JavaScript to play Wildwood Warriors.</p></noscript>
+    <section id="selection" hidden aria-labelledby="selection-title">
+      <div class="intro"><div><p class="eyebrow">A LITTLE COURAGE. A LITTLE MATH.</p><h1 id="selection-title">Small heroes.<br><span>Wild adventures.</span></h1><p class="intro-description">The Wildwood needs a champion. Choose your animal warrior and let your number skills lead the way.</p><div class="intro-tags"><span>10 warriors</span><span>5 stages</span><span>3D battles</span><span>No timer</span></div></div><div class="hero-emblem" aria-hidden="true"><span class="orbit one">+</span><span class="orbit two">&times;</span><span class="orbit three">7</span><div class="shield-emblem"><span>&#x2694;</span><strong>WILDWOOD</strong><small>WARRIORS</small></div><div class="emblem-caption">KNOWLEDGE IS YOUR SUPERPOWER</div></div></div>
+      <div class="selection-heading"><div><p class="eyebrow">YOUR ADVENTURE STARTS HERE</p><h2>Choose your champion</h2></div><button id="open-help" class="text-button">How to play <span aria-hidden="true">?</span></button></div>
+      <div class="selection-layout"><div id="warrior-grid" class="warrior-grid" role="group" aria-label="Choose one of ten warriors"></div><aside class="champion-panel" aria-labelledby="chosen-name"><div id="chosen-portrait" class="chosen-portrait"></div><p id="chosen-animal" class="eyebrow"></p><h2 id="chosen-name"></h2><p id="chosen-title" class="muted"></p><div class="stat-row"><span><small>HEALTH</small><strong id="chosen-hp"></strong></span><span><small>ATTACK</small><strong id="chosen-attack"></strong></span></div><div class="skill-preview"><span class="eyebrow">UNIQUE SKILL</span><h3 id="chosen-skill"></h3><p id="chosen-description"></p></div><button id="start" class="primary">Begin adventure <span aria-hidden="true">&rarr;</span></button><p class="session-note">Progress lasts for this visit. Refreshing starts a new adventure.</p></aside></div>
+      <section class="journey" aria-labelledby="journey-title"><div class="selection-heading"><div><p class="eyebrow">ONE STEP AT A TIME</p><h2 id="journey-title">Your path to the crown</h2></div><span class="muted">Ages 7&ndash;9 &middot; Learn at your own pace</span></div><ol id="journey-list" class="journey-list"></ol></section>
+    </section>
+    <section id="battle" hidden aria-labelledby="battle-title">
+      <div class="battle-heading"><div><p class="eyebrow" id="stage-label"></p><h1 id="battle-title" tabindex="-1"></h1><p id="stage-topic" class="muted"></p></div><button id="change-warrior" class="secondary">Change warrior</button></div>
+      <ol id="stage-track" class="stage-track" aria-label="Stage progress"></ol>
+      <div class="arena arena-3d" id="arena">
+        <div class="arena-hud">
+          <div class="combatant player"><div class="health-label"><strong id="player-name"></strong><span id="player-hp"></span></div><progress id="player-health" aria-label="Your health"></progress><span class="fighter-label">YOUR CHAMPION</span></div>
+          <div class="combatant enemy"><div class="health-label"><strong id="enemy-name"></strong><span id="enemy-hp"></span></div><progress id="enemy-health" aria-label="Guardian health"></progress><span class="fighter-label" id="enemy-label">WOODLAND GUARDIAN</span></div>
+        </div>
+        <div id="scene-view" class="arena-viewport"></div>
+        <div class="scene-tools"><span class="scene-badge">3D ARENA <span aria-hidden="true">&middot;</span> Drag to rotate</span><div class="camera-controls" role="group" aria-label="3D camera"><button id="camera-left" type="button" aria-label="Rotate camera left">&#x21B6;</button><button id="camera-reset" type="button">Reset view</button><button id="camera-right" type="button" aria-label="Rotate camera right">&#x21B7;</button></div></div>
+        <div id="render-error" class="render-error" role="alert" hidden><h2>3D graphics unavailable</h2><p id="render-error-message"></p><button type="button" id="reload-3d" class="primary">Reload game</button></div>
+      </div>
+      <div class="battle-stats"><span id="energy"></span><span id="score"></span></div>
+      <div class="turn-panel" id="turn-panel">
+        <div id="combat-status" hidden role="status" aria-live="polite" tabindex="-1"><span class="combat-status-mark" aria-hidden="true">&#x2694;</span><h2 id="combat-narration"></h2><p>Watch your move play out...</p></div>
+        <form id="question-form" hidden><p class="eyebrow" id="move-label"></p><label for="answer" id="question-expression"></label><div class="answer-row"><input id="answer" name="answer" type="text" inputmode="numeric" pattern="[0-9]{1,3}" maxlength="3" autocomplete="off" required aria-describedby="answer-hint"><button type="submit" class="primary">Answer &rarr;</button></div><p id="answer-hint">Take your time. Enter a whole number from 0 to 100.</p></form>
+        <div id="feedback" hidden role="status" aria-live="polite"><h2 id="feedback-title"></h2><p id="feedback-math"></p><p id="feedback-action"></p><p class="turn-hint">The next question appears automatically.</p></div>
+        <div id="result" hidden><div class="result-icon" aria-hidden="true" id="result-icon"></div><h2 id="result-title" tabindex="-1"></h2><p id="result-description"></p><button id="result-action" class="primary"></button><button id="result-roster" class="text-button">Choose another warrior</button></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>edugames.</span><p>A brave mind is your strongest move.</p><a href="../mathematics.html">Back to Mathematics</a></footer>
+  <dialog id="help" aria-labelledby="help-title"><button class="dialog-close" data-close="help" aria-label="Close instructions">&times;</button><p class="eyebrow">HOW TO PLAY</p><h2 id="help-title">Your mind is your superpower.</h2><ol><li>Choose a warrior. Each has different health, attack and a unique skill.</li><li>Questions appear automatically. Answer correctly to attack.</li><li>Three correct regular answers fill your charge. Your skill activates automatically for the next three questions. Correct answers use the skill; wrong answers still use one of those three questions.</li><li>After your move, the guardian hits back unless you defeated it. A wrong answer skips your move and shows an explanation.</li><li>Clear all five stages to earn the crown. Health refills and skill charge starts at zero at each new stage. You can retry a lost stage.</li></ol><p>No timer. No rush. Every question is a chance to learn.</p><button class="primary" data-close="help">Got it!</button></dialog>
+  <dialog id="leave" aria-labelledby="leave-title"><h2 id="leave-title">Choose a new warrior?</h2><p>This will restart your five-stage adventure.</p><div class="dialog-actions"><button class="secondary" data-close="leave">Keep playing</button><button class="primary" id="confirm-leave">Choose warrior</button></div></dialog>
+</body>
+</html>

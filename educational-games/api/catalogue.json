@@ -1,0 +1,246 @@
+{
+  "warriors": [
+    {
+      "id": "lion",
+      "name": "Leo",
+      "animal": "Lion",
+      "title": "Sunblade captain",
+      "icon": "1F981",
+      "color": "#edbd58",
+      "hp": 110,
+      "attack": 22,
+      "skill": {
+        "name": "Solar Roar",
+        "description": "Strike for 44 damage.",
+        "damage": 44,
+        "heal": 0,
+        "block": 0,
+        "boost": 0
+      }
+    },
+    {
+      "id": "tiger",
+      "name": "Tora",
+      "animal": "Tiger",
+      "title": "Ember striker",
+      "icon": "1F42F",
+      "color": "#ed9860",
+      "hp": 100,
+      "attack": 25,
+      "skill": {
+        "name": "Twin Fang",
+        "description": "Two strikes for 25 damage each.",
+        "damage": 50,
+        "heal": 0,
+        "block": 0,
+        "boost": 0
+      }
+    },
+    {
+      "id": "wolf",
+      "name": "Luna",
+      "animal": "Wolf",
+      "title": "Moonlight guardian",
+      "icon": "1F43A",
+      "color": "#a6bddd",
+      "hp": 105,
+      "attack": 22,
+      "skill": {
+        "name": "Moon Guard",
+        "description": "Deal 30 damage and block the next enemy hit.",
+        "damage": 30,
+        "heal": 0,
+        "block": 1,
+        "boost": 0
+      }
+    },
+    {
+      "id": "bear",
+      "name": "Bram",
+      "animal": "Bear",
+      "title": "Woodland protector",
+      "icon": "1F43B",
+      "color": "#cda27b",
+      "hp": 125,
+      "attack": 18,
+      "skill": {
+        "name": "Forest Remedy",
+        "description": "Recover 40 health and deal 18 damage.",
+        "damage": 18,
+        "heal": 40,
+        "block": 0,
+        "boost": 0
+      }
+    },
+    {
+      "id": "fox",
+      "name": "Faye",
+      "animal": "Fox",
+      "title": "Clever spellweaver",
+      "icon": "1F98A",
+      "color": "#efaa7f",
+      "hp": 95,
+      "attack": 23,
+      "skill": {
+        "name": "Foxfire",
+        "description": "Deal 35 damage and strengthen your next attack by 15.",
+        "damage": 35,
+        "heal": 0,
+        "block": 0,
+        "boost": 15
+      }
+    },
+    {
+      "id": "eagle",
+      "name": "Aero",
+      "animal": "Eagle",
+      "title": "Skyward sentinel",
+      "icon": "1F985",
+      "color": "#dbcba7",
+      "hp": 95,
+      "attack": 24,
+      "skill": {
+        "name": "Sky Dive",
+        "description": "Deal 40 damage and block half of the next enemy hit.",
+        "damage": 40,
+        "heal": 0,
+        "block": 0.5,
+        "boost": 0
+      }
+    },
+    {
+      "id": "panther",
+      "name": "Nyx",
+      "animal": "Panther",
+      "title": "Twilight ranger",
+      "icon": "1F408",
+      "color": "#b5a0db",
+      "hp": 90,
+      "attack": 25,
+      "skill": {
+        "name": "Shadow Pounce",
+        "description": "Deal 55 damage in a powerful surprise strike.",
+        "damage": 55,
+        "heal": 0,
+        "block": 0,
+        "boost": 0
+      }
+    },
+    {
+      "id": "rhino",
+      "name": "Rocco",
+      "animal": "Rhino",
+      "title": "Stonewall champion",
+      "icon": "1F98F",
+      "color": "#b4c2ac",
+      "hp": 125,
+      "attack": 19,
+      "skill": {
+        "name": "Iron Charge",
+        "description": "Deal 28 damage and block 80% of the next enemy hit.",
+        "damage": 28,
+        "heal": 0,
+        "block": 0.8,
+        "boost": 0
+      }
+    },
+    {
+      "id": "crocodile",
+      "name": "Cora",
+      "animal": "Crocodile",
+      "title": "River warden",
+      "icon": "1F40A",
+      "color": "#91c68e",
+      "hp": 115,
+      "attack": 21,
+      "skill": {
+        "name": "River Rush",
+        "description": "Deal 32 damage and recover 18 health.",
+        "damage": 32,
+        "heal": 18,
+        "block": 0,
+        "boost": 0
+      }
+    },
+    {
+      "id": "rabbit",
+      "name": "Pip",
+      "animal": "Rabbit",
+      "title": "Meadow duelist",
+      "icon": "1F430",
+      "color": "#e5b8c6",
+      "hp": 90,
+      "attack": 23,
+      "skill": {
+        "name": "Lucky Leap",
+        "description": "Deal 22 damage, recover 12 health and dodge the next hit.",
+        "damage": 22,
+        "heal": 12,
+        "block": 1,
+        "boost": 0
+      }
+    }
+  ],
+  "stages": [
+    {
+      "id": 1,
+      "name": "Meadow Gate",
+      "enemy": "Moss Training Golem",
+      "icon": "1F333",
+      "color": "#91b87c",
+      "hp": 65,
+      "attack": 10,
+      "topic": "Addition up to 10",
+      "mode": "add10",
+      "description": "Begin your journey in the quiet meadow."
+    },
+    {
+      "id": 2,
+      "name": "Amber Woods",
+      "enemy": "Bramble Guardian",
+      "icon": "1F332",
+      "color": "#c9a269",
+      "hp": 85,
+      "attack": 12,
+      "topic": "Addition up to 20",
+      "mode": "add20",
+      "description": "Find your way through the golden trees."
+    },
+    {
+      "id": 3,
+      "name": "Crystal Cavern",
+      "enemy": "Crystal Sentinel",
+      "icon": "1F48E",
+      "color": "#a899d5",
+      "hp": 105,
+      "attack": 14,
+      "topic": "Subtraction within 20",
+      "mode": "subtract",
+      "description": "Light the cavern with your number skills."
+    },
+    {
+      "id": 4,
+      "name": "Cloud Summit",
+      "enemy": "Storm Guardian",
+      "icon": "2601",
+      "color": "#98bbd6",
+      "hp": 125,
+      "attack": 16,
+      "topic": "Times tables: 2, 5 and 10",
+      "mode": "multiply",
+      "description": "Rise above the clouds and master multiplication."
+    },
+    {
+      "id": 5,
+      "name": "Crown Citadel",
+      "enemy": "The Obsidian King",
+      "icon": "265B",
+      "color": "#d6b86c",
+      "hp": 150,
+      "attack": 18,
+      "topic": "Mixed Math challenge",
+      "mode": "mixed",
+      "description": "Face the final guardian and earn your champion crown."
+    }
+  ]
+}
